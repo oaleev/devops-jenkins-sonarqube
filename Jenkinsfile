@@ -6,7 +6,7 @@ node {
     sh "${GRADLE_HOME}/bin/gradle tasks"
 
     stage('prep') {
-        git url: 'https://github.com/raleev/devops_webapp.git'
+        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/raleev/devops_webapp.git']])
     }
 
     stage('build') {

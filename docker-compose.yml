@@ -44,7 +44,7 @@ services:
       - "9000:9000"
       - "9092:9092"
     networks:
-      - cloudacademylabs
+      - manralalabs
     environment:
       SONARQUBE_JDBC_USERNAME: sonar
       SONARQUBE_JDBC_PASSWORD: sonarpasswd
@@ -53,5 +53,5 @@ services:
       - postgres
 
 networks:
-  cloudacademylabs:
+  manralalabs:
     name: manralalabs

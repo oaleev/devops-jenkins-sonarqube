@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    env {
-        SONARQUBE_HOSTNAME = 'sonarqube'
-        GRADLE_HOME = tool name: 'gradle', type: 'hudson.plugins.gradle.GradleInstallation'
+    environment {
+        SONARQUBE_HOSTNAME=tool 'sonar'
+        GRADLE_HOME = tool: 'gradle', type: 'hudson.plugins.gradle.GradleInstallation'
     }
     stages {
         stage('Prep') {

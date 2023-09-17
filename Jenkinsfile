@@ -10,5 +10,10 @@ pipeline {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/raleev/devops_webapp.git']])
             }
         }
+        stage('build') {
+          steps {
+            sh "${GRADLE_HOME}/bin/gradle build"
+          }
+        }
     }
 }

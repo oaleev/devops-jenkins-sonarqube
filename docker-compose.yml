@@ -24,7 +24,7 @@ services:
       - "2375"
   postgres:
     container_name: postgres
-    image: postgres-ca:latest
+    image: postgres:latest
     #image: postgres:9.6
     networks:
       - manralalabs
@@ -38,7 +38,7 @@ services:
         hard: 40000
   sonarqube:
     container_name: sonarqube
-    image: sonarqube-ca:latest
+    image: sonarqube:latest
     #image: sonarqube:7.1
     ports:
       - "9000:9000"
@@ -54,4 +54,4 @@ services:
 
 networks:
   cloudacademylabs:
-    name: cloudacademylabs
+    name: manralalabs
